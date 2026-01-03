@@ -13,8 +13,8 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/product/:id" element={<ProductPage />} />
-          <Route path="/profile" element={<CreatePage />} />
-          <Route path="/create" element={<EditProfilePage />} />
+          <Route path="/create" element={<CreatePage />} />
+          <Route path="/profile" element={<EditProfilePage />} />
         </Routes>
       </main>
     </div>
