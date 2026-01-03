@@ -7,7 +7,7 @@ const router = Router();
 //GET /api/products/ - Get all products (public)
 router.get("/", productController.getAllProducts);
 
-// GET /api/products/y - Get products by current user (protected)
+// GET /api/products/my - Get products by current user (protected)
 router.get("/my", requireAuth(), productController.getMyProducts);
 
 // GET /api/products/:id - Get single product by id (public)

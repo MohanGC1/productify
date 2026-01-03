@@ -38,7 +38,7 @@ export const deleteComment = async (req: Request, res: Response) => {
     const { userId } = getAuth(req);
     if (!userId) return res.status(401).json({ error: "Unauthorized" });
 
-    const { commentId } = req.params;
+    const { id: commentId } = req.params;
 
     //check if comment exists and belongs to user
     const existingComment = await queries.getCommentById(commentId);
