@@ -6,7 +6,7 @@ import ProductCard from "../components/ProductCard";
 import { SignInButton } from "@clerk/clerk-react";
 
 function HomePage() {
-  const { data: products, isLoading, error } = useProducts();
+  const { data: products = [], isLoading, error } = useProducts();
 
   if (isLoading) return <LoadingSpinner />;
 
@@ -55,7 +55,7 @@ function HomePage() {
           All Products
         </h2>
 
-        {products.length === 0 ? (
+        {products?.length === 0 ? (
           <div className="card bg-base-300">
             <div className="card-body items-center text-center py-16">
               <PackageIcon className="size-16 text-base-content/20" />

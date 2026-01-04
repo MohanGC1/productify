@@ -105,7 +105,7 @@ function CreatePage() {
             <button
               type="submit"
               className="btn btn-primary w-full"
-              disabled={createProduct.isLoading}
+              disabled={createProduct.isPending}
             >
               {createProduct.isPending ? (
                 <span className="loading loading-spinner" />

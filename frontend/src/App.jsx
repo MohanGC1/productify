@@ -27,9 +27,7 @@ function App() {
           />
           <Route
             path="/create"
-            element={
-              isSignedIn ? <CreatePage /> : <Navigate to={"/profile "} />
-            }
+            element={isSignedIn ? <CreatePage /> : <Navigate to={"/"} />}
           />
           <Route
             path="/edit/:id"
